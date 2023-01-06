@@ -1,0 +1,26 @@
+Operation 1: show all packages
+Upon opening the program, it will automatically open the showAllPackages view.
+
+Operation 2: Add a package
+Upon pressing the button "Add" at the bottom of the frame, a new dialog will prompt user input. The button "Create" at
+the bottom of the dialog will validate the user data. Upon successful validation, the package will be created and
+added to the array list. The button "Cancel" at the bottom will close the dialog and return to the main frame.
+
+Operation 3: Remove a package
+The button "Remove" contained in the individual package panels will remove the package from the arraylist, and the page
+will be refreshed to show the updated view.
+
+Operation 4: List overdue packages
+Upon pressing the "Overdue" button, the scroll panel will display all the packages that is overdue.
+
+Operation 5: List upcoming packages
+Upon pressing the "Upcoming" button, the scroll panel wil display all the packages that is upcoming.
+
+Operation 6: Mark as delivered
+Upon checking the checkbox contained in the individual package panels, the package will be set to delivered and will
+not appear in both the upcoming and overdue views. Also, upon checking the checkbox, the display will refresh
+automatically showing the updated data. To mark a package as undelivered, simply uncheck the checkbox.
+
+Operation 7: Exit
+Upon clicking the exit button of the JFrame, the program will save all the data by deserializing all the package objects
+in the arraylist to a JSON object.

@@ -1,0 +1,53 @@
+Operation 1 list all packages:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listAll
+
+Operation 2 add a package(sample):
+curl -i -H "Content-Type: application/json" -X POST -d '{
+    "author": "J.K. Rowling",
+    "type": "Book",
+    "name": "Harry Potter",
+    "notes": "The first one",
+    "price": 50.0,
+    "weight": 2.0,
+    "delivered": false,
+    "expectedDeliveryDate": "2022-08-04T01:00"
+}' localhost:8080/addBook
+
+curl -i -H "Content-Type: application/json" -X POST -d '{
+    "expiryDate": "2023-08-19T02:30",
+    "type": "Perishable",
+    "name": "Shredded cheese",
+    "notes": "Cheddar",
+    "price": 40.0,
+    "weight": 1.0,
+    "delivered": false,
+    "expectedDeliveryDate": "2022-08-04T01:00"
+}' localhost:8080/addPerishable
+
+curl -i -H "Content-Type: application/json" -X POST -d '{
+    "fee": "99.0",
+    "type": "Electronic",
+    "name": "Air conditioner",
+    "notes": "A really big one",
+    "price": 450.0,
+    "weight": 20.0,
+    "delivered": false,
+    "expectedDeliveryDate": "2022-08-04T01:00"
+}' localhost:8080/addElectronic
+
+Operation 3 remove a package(sample):
+curl -i -H "Content-Type: application/json" -X POST localhost:8080/removePackage/1
+
+Operation 4 list overdue package:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listOverduePackage
+
+Operation 5 list upcoming package:
+curl -i -H "Content-Type: application/json" -X GET localhost:8080/listUpcomingPackage
+
+Operation 6 mark package as delivered(sample):
+curl -i -H "Content-Type: application/json" -X POST localhost:8080/markPackageAsDelivered/1
+
+Operation 7 exit:
+curl -i -H "Content-Type: application/json" -X POST localhost:8080/exit
+
+
